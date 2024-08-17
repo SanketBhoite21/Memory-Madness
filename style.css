@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"); /* Fun, cartoon-like font */
+
+body {
+  background-color: #252525;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+.game {
+  background-color: #414141;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+h1,
+h2 {
+  margin: 0.5rem;
+  color: #fff;
+  font-family: "Freckle Face", cursive; /* Fun and playful font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px; /* Spacing between letters */
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    135deg,
+    #ff69b4,
+    #ffcc00
+  ); /* Bright, fun gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Bold shadow for cartoon effect */
+  padding: 0.5rem;
+
+  background-color: #000; /* Background for contrast */
+  display: inline-block; /* Adjusts the box model for borders and padding */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  background: linear-gradient(
+    135deg,
+    #00bfff,
+    #ff1493
+  ); /* Bright, contrasting gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for cartoon effect */
+  padding: 0.3rem;
+
+  background-color: #000; /* Background for contrast */
+  display: inline-block; /* Adjusts the box model for borders and padding */
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  background-color: #414141;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+.btn:active {
+  animation: pulse 0.2s ease;
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.9);
+}
+
+.btn.flash {
+  animation: flash 1s infinite;
+}
+
+.yellow {
+  background-color: #94fc13;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.green {
+  background-color: #00d1cd;
+}
+
+.blue {
+  background-color: #f30067;
+}
+
+.fa-face-smile,
+.fa-face-sad-tear,
+.fa-face-angry,
+.fa-face-laugh-wink {
+  font-size: 4rem;
+  color: white;
+}
+
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #414141;
+  }
+  50% {
+    background-color: #222831;
+  }
+  100% {
+    background-color: #503c3c;
+  }
+}
+
+.game {
+  animation: backgroundAnimation 5s infinite alternate;
+}
